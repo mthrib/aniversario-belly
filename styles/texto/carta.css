@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at top, #111, #000);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/* container */
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* card */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 600px;
+    text-align: center;
+
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(77, 255, 101, 0.2);
+}
+
+/* título */
+.card h1 {
+    margin-bottom: 20px;
+    color: #00db0d;
+}
+
+/* texto */
+#text {
+    font-size: 1.2em;
+    line-height: 1.6;
+    min-height: 120px;
+}
+
+/* botão */
+button {
+    margin-top: 20px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(45deg, #00db0d, #00ff66);
+    box-shadow: 0 0 20px rgba(0, 255, 100, 0.7);
+    color: white;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* mensagem final */
+.final-message {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: black;
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 1s;
+}
+
+.final-message.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.final-message h2 {
+    font-size: 3em;
+    text-align: center;
+}
+
+.final-message h2 span {
+    color: #00db0d;
+    text-shadow: 0 0 20px #00db0d;
+}
